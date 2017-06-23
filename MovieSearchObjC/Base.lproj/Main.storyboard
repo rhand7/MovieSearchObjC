@@ -10,17 +10,25 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Table View Controller-->
+        <!--Movie List Table View Controller-->
         <scene sceneID="16B-Rq-CDy">
             <objects>
-                <tableViewController id="T7r-zf-dVL" sceneMemberID="viewController">
+                <tableViewController id="T7r-zf-dVL" customClass="MovieListTableViewController" customModule="MovieSearchObjC" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="226" sectionHeaderHeight="28" sectionFooterHeight="28" id="fK2-v2-Qjx">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <searchBar key="tableHeaderView" contentMode="redraw" id="4wU-J3-fbt">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <outlet property="delegate" destination="T7r-zf-dVL" id="VdL-ZL-6uc"/>
+                            </connections>
+                        </searchBar>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="226" id="8fL-2w-SxY">
-                                <rect key="frame" x="0.0" y="28" width="375" height="226"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="movieCell" rowHeight="226" id="8fL-2w-SxY" customClass="SearchResultsTableViewCell" customModule="MovieSearchObjC" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="72" width="375" height="226"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="8fL-2w-SxY" id="jBe-Qk-mY7">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="225.5"/>
@@ -60,6 +68,11 @@
                                         <constraint firstItem="cUJ-eg-glr" firstAttribute="top" secondItem="GRC-Rn-Pdf" secondAttribute="bottom" constant="8" id="wAK-Lg-fqO"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="movieOverviewLabel" destination="cUJ-eg-glr" id="C18-V1-22m"/>
+                                    <outlet property="movieRatingLabel" destination="GRC-Rn-Pdf" id="C2k-6a-DxQ"/>
+                                    <outlet property="movieTitleLabel" destination="LXL-hV-YsY" id="SDi-sy-G2z"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -68,6 +81,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="go6-h4-523"/>
+                    <connections>
+                        <outlet property="searchBar" destination="4wU-J3-fbt" id="p79-bj-upV"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rH9-Sb-D5D" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

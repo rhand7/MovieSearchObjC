@@ -14,8 +14,8 @@
 		2A2075811EFC1A62006BF97B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A20757F1EFC1A62006BF97B /* LaunchScreen.storyboard */; };
 		2A20758F1EFC2159006BF97B /* RWHMovie.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A20758E1EFC2159006BF97B /* RWHMovie.m */; };
 		2A2075921EFC2192006BF97B /* RWHMovieController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A2075911EFC2192006BF97B /* RWHMovieController.m */; };
-		2A2075961EFC23FE006BF97B /* RWHMovieSearchResultListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A2075951EFC23FE006BF97B /* RWHMovieSearchResultListTableViewController.m */; };
-		2A2075991EFC249B006BF97B /* RWHMovieSearchResultTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A2075981EFC249B006BF97B /* RWHMovieSearchResultTableViewCell.m */; };
+		2A20759C1EFD6659006BF97B /* MovieListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A20759B1EFD6659006BF97B /* MovieListTableViewController.swift */; };
+		2A20759E1EFD6678006BF97B /* SearchResultsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A20759D1EFD6678006BF97B /* SearchResultsTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,10 +31,9 @@
 		2A20758E1EFC2159006BF97B /* RWHMovie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWHMovie.m; sourceTree = "<group>"; };
 		2A2075901EFC2192006BF97B /* RWHMovieController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWHMovieController.h; sourceTree = "<group>"; };
 		2A2075911EFC2192006BF97B /* RWHMovieController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWHMovieController.m; sourceTree = "<group>"; };
-		2A2075941EFC23FE006BF97B /* RWHMovieSearchResultListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWHMovieSearchResultListTableViewController.h; sourceTree = "<group>"; };
-		2A2075951EFC23FE006BF97B /* RWHMovieSearchResultListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWHMovieSearchResultListTableViewController.m; sourceTree = "<group>"; };
-		2A2075971EFC249B006BF97B /* RWHMovieSearchResultTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWHMovieSearchResultTableViewCell.h; sourceTree = "<group>"; };
-		2A2075981EFC249B006BF97B /* RWHMovieSearchResultTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWHMovieSearchResultTableViewCell.m; sourceTree = "<group>"; };
+		2A20759A1EFD6659006BF97B /* MovieSearchObjC-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MovieSearchObjC-Bridging-Header.h"; sourceTree = "<group>"; };
+		2A20759B1EFD6659006BF97B /* MovieListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieListTableViewController.swift; sourceTree = "<group>"; };
+		2A20759D1EFD6678006BF97B /* SearchResultsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultsTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +70,7 @@
 				2A2075751EFC1A62006BF97B /* AppDelegate.m */,
 				2A2075881EFC1A77006BF97B /* Storyboards */,
 				2A20757A1EFC1A62006BF97B /* Main.storyboard */,
+				2A20757F1EFC1A62006BF97B /* LaunchScreen.storyboard */,
 				2A20758C1EFC209A006BF97B /* Models */,
 				2A20758B1EFC2092006BF97B /* ModelControllers */,
 				2A20758A1EFC2082006BF97B /* ViewControllers */,
@@ -99,8 +99,8 @@
 		2A2075891EFC1A81006BF97B /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				2A20759A1EFD6659006BF97B /* MovieSearchObjC-Bridging-Header.h */,
 				2A20757D1EFC1A62006BF97B /* Assets.xcassets */,
-				2A20757F1EFC1A62006BF97B /* LaunchScreen.storyboard */,
 				2A2075821EFC1A62006BF97B /* Info.plist */,
 			);
 			name = Resources;
@@ -109,8 +109,7 @@
 		2A20758A1EFC2082006BF97B /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				2A2075941EFC23FE006BF97B /* RWHMovieSearchResultListTableViewController.h */,
-				2A2075951EFC23FE006BF97B /* RWHMovieSearchResultListTableViewController.m */,
+				2A20759B1EFD6659006BF97B /* MovieListTableViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -136,8 +135,7 @@
 		2A2075931EFC21C5006BF97B /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				2A2075971EFC249B006BF97B /* RWHMovieSearchResultTableViewCell.h */,
-				2A2075981EFC249B006BF97B /* RWHMovieSearchResultTableViewCell.m */,
+				2A20759D1EFD6678006BF97B /* SearchResultsTableViewCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -174,6 +172,7 @@
 					2A20756D1EFC1A62006BF97B = {
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = WC4MWVKQFQ;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -216,10 +215,10 @@
 			files = (
 				2A2075921EFC2192006BF97B /* RWHMovieController.m in Sources */,
 				2A2075761EFC1A62006BF97B /* AppDelegate.m in Sources */,
+				2A20759E1EFD6678006BF97B /* SearchResultsTableViewCell.swift in Sources */,
 				2A20758F1EFC2159006BF97B /* RWHMovie.m in Sources */,
-				2A2075961EFC23FE006BF97B /* RWHMovieSearchResultListTableViewController.m in Sources */,
 				2A2075731EFC1A62006BF97B /* main.m in Sources */,
-				2A2075991EFC249B006BF97B /* RWHMovieSearchResultTableViewCell.m in Sources */,
+				2A20759C1EFD6659006BF97B /* MovieListTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,11 +338,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = WC4MWVKQFQ;
 				INFOPLIST_FILE = MovieSearchObjC/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.rob-hand.MovieSearchObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MovieSearchObjC/MovieSearchObjC-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -351,11 +354,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = WC4MWVKQFQ;
 				INFOPLIST_FILE = MovieSearchObjC/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.rob-hand.MovieSearchObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MovieSearchObjC/MovieSearchObjC-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
